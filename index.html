@@ -3,87 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポップアート・イラストレーター | 作品集</title>
-  <!-- 外部资源 -->
+  <title>カラフルイラスト | 作品集サイト</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
-  
-  <!-- Tailwind 配置 -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            popPink: '#FF359A',
-            popYellow: '#FFD100',
-            popBlue: '#0091AD',
-            popOrange: '#FF7A00',
-            popPurple: '#9E44FF',
-            popBlack: '#1A1A1A',
-            retroBeige: '#F5F0E6',
+            popRed: '#FF4136',
+            popYellow: '#FFDC00',
+            popBlue: '#0074D9',
+            popPink: '#FF69B4',
+            popGreen: '#2ECC40',
+            retroBlack: '#1A1A1A',
+            retroBeige: '#F8F1E9'
           },
           fontFamily: {
-            display: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
-            body: ['"Helvetica"', 'Arial', 'sans-serif'],
+            sans: ['Helvetica', 'Arial', 'sans-serif'],
           },
-          animation: {
-            'float': 'float 6s ease-in-out infinite',
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            }
-          },
-        },
+        }
       }
     }
   </script>
-  
-  <!-- 自定义工具类 -->
   <style type="text/tailwindcss">
     @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
       .text-shadow {
-        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-      }
-      .text-shadow-pop {
-        text-shadow: 4px 4px 0px #000;
-      }
-      .rotate-hover {
-        transition: transform 0.3s ease;
-      }
-      .rotate-hover:hover {
-        transform: rotate(-2deg) scale(1.02);
-      }
-      .clip-path-slant {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      }
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
+        text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
       }
       .pop-border {
-        position: relative;
+        border: 3px solid #1A1A1A;
+        box-shadow: 6px 6px 0px #1A1A1A;
       }
-      .pop-border::after {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-        border: 2px solid #000;
-        z-index: -1;
-        transform: rotate(1deg);
+      .hover-lift {
+        transition: all 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 8px 8px 0px #1A1A1A;
       }
     }
   </style>
 </head>
-<body class="bg-retroBeige text-popBlack overflow-x-hidden font-body">
-  <!-- Place your full page content here. The rest of your code continues unchanged as posted. -->
+<body class="bg-retroBeige text-retroBlack overflow-x-hidden">
+  <!-- 导航栏 -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b-2 border-retroBlack">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold flex items-center">
+        <span class="text-popPink">ILLU</span><span class="text-popBlue">ART</span>
+      </a>
+      <div class="hidden md:flex space-x-8 font-bold">
+        <a href="#top" class="hover:text-popRed transition-colors">トップ</a>
+        <a href="#featured" class="hover:text-popYellow transition-colors">特選作品</a>
+        <a href="#portfolio" class="hover:text-popBlue transition-colors">作品集</a>
+        <a href="#style" class="hover:text-popPink transition-colors">スタイル</a>
+        <a href="#about" class="hover:text-popGreen transition-colors">About</a>
+        <a href="#contact" class="hover:text-popRed transition-colors">お問い合わせ</a>
+      </div>
+      <button class="md:hidden text-xl">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 顶部横幅 -->
+  <header id="top" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-popBlue/20 to-popPink/20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="text-popRed text-shadow">カラフル</span>
+        <span class="block md:inline">なイラストレーション</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+        复古ポップスタイルで、あなたの想いを視覚化する
+      </p>
+      <a href="#portfolio" class="inline-block bg-popYellow pop-border px-8 py-3 font-bold text-retroBlack hover-lift">
+        作品集を見る <i class="fa fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 特选作品 -->
+  <section id="featured" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <span class="inline-block border-b-4 border-popPink pb-2">特選作品</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="pop-border bg-white p-2 hover-lift">
+          <img src="https://picsum.photos/id/237/800/600" alt="特選作品" class="w-full h-auto">
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 text-popBlue">都市の光</h3>
+          <p class="text-lg mb-6">
+            現代都市のエネルギーを、鮮やかな色彩で表現した作品です。
+            复古ポップアートの要素を取り入れ、明るく活力あふれる雰囲気を作り出しています。
+          </p>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="bg-popRed text-white px-3 py-1 rounded-sm">都市</span>
+            <span class="bg-popBlue text-white px-3 py-1 rounded-sm">ポップアート</span>
+            <span class="bg-popYellow text-retroBlack px-3 py-1 rounded-sm">カラフル</span>
+          </div>
+          <a href="#portfolio" class="font-bold text-popPink hover:underline">
+            他の作品を見る <i class="fa fa-angle-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集（10作品） -->
+  <section id="portfolio" class="py-16 md:py-24 bg-retroBlack text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <span class="inline-block border-b-4 border-popYellow pb-2">作品集</span>
+      </h2>
+      <p class="text-center mb-12 text-lg">
+        これまで制作したイラストレーションを展示しています（全10作品）
+      </p>
+
+      <!-- 作品筛选 -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="bg-popYellow text-retroBlack px-4 py-2 font-bold rounded-sm hover-lift">すべて</button>
+        <button class="bg-gray-700 px-4 py-2 font-bold rounded-sm hover:bg-popPink transition-colors">キャラクター</button>
+        <button class="bg-gray-700 px-4 py-2 font-bold rounded-sm hover:bg-popBlue transition-colors">風景</button>
+        <button class="bg-gray-700 px-4 py-2 font-bold rounded-sm hover:bg-popGreen transition-colors">アブストラクト</button>
+        <button class="bg-gray-700 px-4 py-2 font-bold rounded-sm hover:bg-popRed transition-colors">商品デザイン</button>
+      </div>
+
+      <!-- 作品网格 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 作品1 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/64/600/800" alt="作品1" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">ポップガール</h3>
+          <p class="text-sm mb-2">キャラクター / 明るい雰囲気</p>
+        </div>
+        <!-- 作品2 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1031/600/800" alt="作品2" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">都市の夜</h3>
+          <p class="text-sm mb-2">風景 / 夜景 / ネオン</p>
+        </div>
+        <!-- 作品3 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/102/600/800" alt="作品3" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">熱帯の花</h3>
+          <p class="text-sm mb-2">自然 / 色彩豊か</p>
+        </div>
+        <!-- 作品4 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1040/600/800" alt="作品4" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">色彩の衝突</h3>
+          <p class="text-sm mb-2">アブストラクト / ダイナミック</p>
+        </div>
+        <!-- 作品5 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1062/600/800" alt="作品5" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">ファンタジーキャラ</h3>
+          <p class="text-sm mb-2">キャラクター / ファンタジー</p>
+        </div>
+        <!-- 作品6 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1033/600/800" alt="作品6" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">未来都市</h3>
+          <p class="text-sm mb-2">風景 / SF / 未来的</p>
+        </div>
+        <!-- 作品7 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1080/600/800" alt="作品7" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">森の精霊</h3>
+          <p class="text-sm mb-2">キャラクター / 自然</p>
+        </div>
+        <!-- 作品8 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1048/600/800" alt="作品8" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">音楽の色彩</h3>
+          <p class="text-sm mb-2">アブストラクト / 音楽</p>
+        </div>
+        <!-- 作品9 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift">
+          <img src="https://picsum.photos/id/1069/600/800" alt="作品9" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">商品パッケージ</h3>
+          <p class="text-sm mb-2">商品デザイン / 食品</p>
+        </div>
+        <!-- 作品10 -->
+        <div class="bg-white text-retroBlack pop-border p-2 hover-lift sm:col-span-2 lg:col-span-1">
+          <img src="https://picsum.photos/id/1049/600/800" alt="作品10" class="w-full h-64 object-cover mb-3">
+          <h3 class="font-bold text-lg mb-1">幾何学の夢</h3>
+          <p class="text-sm mb-2">アブストラクト / 幾何学</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作风格 -->
+  <section id="style" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <span class="inline-block border-b-4 border-popBlue pb-2">创作スタイル</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 pop-border hover-lift">
+          <div class="w-16 h-16 bg-popPink rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+            <i class="fa fa-paint-brush"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">复古ポップ</h3>
+          <p class="text-center">
+            60-70年代のポップアートを基調に、現代的なテイストを加えたスタイルです。
+            大胆な線と鮮やかな色彩が特徴です。
+          </p>
+        </div>
+        <div class="bg-white p-6 pop-border hover-lift">
+          <div class="w-16 h-16 bg-popBlue rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+            <i class="fa fa-palette"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">色彩豊か</h3>
+          <p class="text-center">
+            高い彩度の色彩を組み合わせ、視覚的なインパクトを与える作品を制作しています。
+            明るく楽しい雰囲気を重視しています。
+          </p>
+        </div>
+        <div class="bg-white p-6 pop-border hover-lift">
+          <div class="w-16 h-16 bg-popYellow rounded-full flex items-center justify-center text-retroBlack text-2xl mb-4 mx-auto">
+            <i class="fa fa-lightbulb-o"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">創作スタイル</h3>
+          <p class="text-center">
+            60-70年代のポップアートを基調に、現代的なテイストを加えたスタイルです。
+            大胆な線と鮮やかな色彩が特徴です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
