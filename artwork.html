@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>插画师作品集 — Portfolio</title>
+  <title data-i18n="page_title">作品详情 — Artwork</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,25 +11,19 @@
     <div class="container header-row">
       <div class="brand">
         <a href="index.html" class="logo">YourName</a>
-        <span class="tag" data-i18n="tag">插画 · Illustration</span>
       </div>
-
       <nav class="nav">
-        <button id="langToggle" class="lang-toggle" aria-pressed="false">EN</button>
+        <button id="langToggleDetail" class="lang-toggle" aria-pressed="false">EN</button>
       </nav>
     </div>
   </header>
 
-  <main class="container main">
-    <section class="hero">
-      <h1 class="hero-title" data-i18n="hero_title">极简 · 中性 · 插画作品</h1>
-      <p class="hero-sub" data-i18n="hero_sub">点击作品查看详情 — 支持中/英双语</p>
-    </section>
+  <main class="container artwork-main">
+    <a class="back-link" href="index.html" data-i18n="back">← 返回画廊</a>
 
-    <section class="gallery" aria-label="作品画廊">
-      <!-- gallery items injected by script -->
-      <div id="galleryGrid" class="grid"></div>
-    </section>
+    <article id="artwork" class="artwork-article">
+      <!-- content injected by script -->
+    </article>
   </main>
 
   <footer class="site-footer">
@@ -37,13 +31,9 @@
       <div class="copyright">
         <span data-i18n="copyright">© 2025 YourName. All rights reserved.</span>
       </div>
-      <div class="links">
-        <a href="mailto:you@example.com" class="contact">you@example.com</a>
-      </div>
     </div>
   </footer>
 
-  <!-- Star cursor element -->
   <div id="starCursor" class="star-cursor" aria-hidden="true"></div>
 
   <script src="script.js" type="module"></script>

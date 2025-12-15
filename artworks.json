@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title_cn": "晨光",
+    "title_en": "Morning Light",
+    "short_cn": "一幅氛围插画，柔和的色调",
+    "short_en": "An atmospheric piece with soft tones",
+    "desc_cn": "创作时间：2024。灵感来自城市清晨的静谧与光线变化，使用手绘与数字合成。",
+    "desc_en": "Created 2024. Inspired by the quiet and changing light of the city morning. Mixed hand-drawn and digital composition.",
+    "image": "images/1.jpg"
+  },
+  {
+    "id": 2,
+    "title_cn": "夜游",
+    "title_en": "Night Walk",
+    "short_cn": "夜间街头的色彩探索",
+    "short_en": "Color exploration of nocturnal streets",
+    "desc_cn": "探索夜色中霓虹与影子的对话，色彩以冷暖对比为主。",
+    "desc_en": "Exploring neon and shadows at night with warm-cool color contrasts.",
+    "image": "images/2.jpg"
+  },
+  {
+    "id": 3,
+    "title_cn": "风的记忆",
+    "title_en": "Memory of Wind",
+    "short_cn": "拟人化的自然插画",
+    "short_en": "Personified nature illustration",
+    "desc_cn": "抽象化风的线条与植物的结合，强调节奏与留白。",
+    "desc_en": "Abstract lines of wind combined with plants; emphasis on rhythm and negative space.",
+    "image": "images/3.jpg"
+  },
+  {
+    "id": 4,
+    "title_cn": "午后茶",
+    "title_en": "Afternoon Tea",
+    "short_cn": "温暖日常场景",
+    "short_en": "Warm everyday scene",
+    "desc_cn": "描绘一段温柔的生活瞬间，色彩温暖柔和。",
+    "desc_en": "Depicts a gentle everyday moment with warm, soft colors.",
+    "image": "images/4.jpg"
+  },
+  {
+    "id": 5,
+    "title_cn": "季节便笺",
+    "title_en": "Seasonal Notes",
+    "short_cn": "系列小插画集合",
+    "short_en": "A collection of small seasonal illustrations",
+    "desc_cn": "系列作品，记录四季细节与情绪变化。",
+    "desc_en": "Series capturing seasonal details and mood shifts.",
+    "image": "images/5.jpg"
+  },
+  {
+    "id": 6,
+    "title_cn": "窗外的故事",
+    "title_en": "Stories Outside the Window",
+    "short_cn": "视角与叙事结合",
+    "short_en": "Combination of perspective and narrative",
+    "desc_cn": "从窗框看见的陌生日常，试图讲述微小故事。",
+    "desc_en": "Strange everyday scenes seen through a window frame telling little stories.",
+    "image": "images/6.jpg"
+  },
+  {
+    "id": 7,
+    "title_cn": "纸飞船",
+    "title_en": "Paper Ship",
+    "short_cn": "童趣与想象",
+    "short_en": "Childlike whimsy and imagination",
+    "desc_cn": "以儿童视角出发的插画，带有手工质感。",
+    "desc_en": "Illustration from a child's view with a handmade feel.",
+    "image": "images/7.jpg"
+  },
+  {
+    "id": 8,
+    "title_cn": "静物练习",
+    "title_en": "Still Life Study",
+    "short_cn": "静物技法练习",
+    "short_en": "Still life technique study",
+    "desc_cn": "练习光影与观察的作品，注重材料质感。",
+    "desc_en": "Practice piece focusing on light, observation and material texture.",
+    "image": "images/8.jpg"
+  },
+  {
+    "id": 9,
+    "title_cn": "城市风景",
+    "title_en": "Urban Scape",
+    "short_cn": "都市建筑与人物关系",
+    "short_en": "Relationship between buildings and people",
+    "desc_cn": "探索人在都市中的孤独与温度。",
+    "desc_en": "Explores solitude and warmth of people within the city.",
+    "image": "images/9.jpg"
+  },
+  {
+    "id": 10,
+    "title_cn": "梦中小岛",
+    "title_en": "Isle in Dreams",
+    "short_cn": "梦境般的插画场景",
+    "short_en": "A dreamlike illustrative scene",
+    "desc_cn": "超现实的小岛场景，带有象征意味。",
+    "desc_en": "A surreal island scene with symbolic meaning.",
+    "image": "images/10.jpg"
+  }
+]
