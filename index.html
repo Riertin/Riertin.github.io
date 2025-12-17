@@ -1,51 +1,150 @@
-<!doctype html>
-<html lang="zh" data-lang="cn">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>插画师作品集 — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riertin的个人设计空间</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-row">
-      <div class="brand">
-        <a href="index.html" class="logo">YourName</a>
-        <span class="tag" data-i18n="tag">插画 · Illustration</span>
-      </div>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">Riertin</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="pages/artwork.html">绘画作品</a></li>
+                    <li><a href="pages/music.html">音乐世界</a></li>
+                    <li><a href="pages/about.html">关于我</a></li>
+                    <li><a href="pages/contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-      <nav class="nav">
-        <button id="langToggle" class="lang-toggle" aria-pressed="false">EN</button>
-      </nav>
-    </div>
-  </header>
+    <main>
+        <section class="carousel-section">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/banner1.jpg" alt="轮播图1">
+                        <div class="carousel-caption">
+                            <h2>用画笔记录生活</h2>
+                            <p>在色彩与线条间表达内心的触动</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/banner2.jpg" alt="轮播图2">
+                        <div class="carousel-caption">
+                            <h2>让音乐点亮心灵</h2>
+                            <p>沉浸在旋律之中感受节奏与温度</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/banner3.jpg" alt="轮播图3">
+                        <div class="carousel-caption">
+                            <h2>艺术连接世界</h2>
+                            <p>观察世界连接自我的方式</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </section>
 
-  <main class="container main">
-    <section class="hero">
-      <h1 class="hero-title" data-i18n="hero_title">极简 · 中性 · 插画作品</h1>
-      <p class="hero-sub" data-i18n="hero_sub">点击作品查看详情 — 支持中/英双语</p>
-    </section>
+        <section class="intro-section">
+            <div class="container">
+                <h1 class="section-title">欢迎来到我的创作空间</h1>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <p>大家好，我是Riertin，今年19岁，目前就读于苏州大学艺术学院，是一名本科在读生。</p>
+                        <p>平日生活中，绘画与音乐是我不可或缺的伙伴。我喜欢用画笔捕捉灵感，在色彩与线条间表达内心的触动；也享受沉浸在旋律之中，让音乐带给生活更多的节奏与温度。</p>
+                        <p>艺术对我来说不仅是专业，更是一种观察世界、连接自我的方式。很高兴能在这里与大家相遇，期待能与你们多多交流，共同分享生活中的美好与灵感。</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="images/profile.jpg" alt="个人照片">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="gallery" aria-label="作品画廊">
-      <!-- gallery items injected by script -->
-      <div id="galleryGrid" class="grid"></div>
-    </section>
-  </main>
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">探索我的世界</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="card-image">
+                            <img src="images/artwork-preview.jpg" alt="绘画作品预览">
+                        </div>
+                        <div class="card-content">
+                            <h3>绘画作品</h3>
+                            <p>用色彩和线条记录生活中的美好瞬间，每一幅作品都承载着独特的情感与故事。</p>
+                            <a href="pages/artwork.html" class="btn-more">查看更多</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="card-image">
+                            <img src="images/music-preview.jpg" alt="音乐世界预览">
+                        </div>
+                        <div class="card-content">
+                            <h3>音乐世界</h3>
+                            <p>分享我喜欢的音乐和创作心得，让旋律成为连接彼此的桥梁。</p>
+                            <a href="pages/music.html" class="btn-more">查看更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="copyright">
-        <span data-i18n="copyright">© 2025 YourName. All rights reserved.</span>
-      </div>
-      <div class="links">
-        <a href="mailto:you@example.com" class="contact">you@example.com</a>
-      </div>
-    </div>
-  </footer>
+        <section class="highlight-section">
+            <div class="container">
+                <h2 class="section-title">最新动态</h2>
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <img src="images/recent1.jpg" alt="最新作品1">
+                        <div class="highlight-info">
+                            <h4>水彩风景系列</h4>
+                            <p>2025年1月</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <img src="images/recent2.jpg" alt="最新作品2">
+                        <div class="highlight-info">
+                            <h4>人物素描练习</h4>
+                            <p>2024年12月</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <img src="images/recent3.jpg" alt="最新作品3">
+                        <div class="highlight-info">
+                            <h4>音乐创作分享</h4>
+                            <p>2024年11月</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <img src="images/recent4.jpg" alt="最新作品4">
+                        <div class="highlight-info">
+                            <h4>色彩研究笔记</h4>
+                            <p>2024年10月</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Star cursor element -->
-  <div id="starCursor" class="star-cursor" aria-hidden="true"></div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Riertin的个人设计空间</p>
+        </div>
+    </footer>
 
-  <script src="script.js" type="module"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
